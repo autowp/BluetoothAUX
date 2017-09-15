@@ -14085,7 +14085,7 @@ Source: RS Component / Phycomp</description>
 <part name="RN1" library="resistor-dil" library_urn="urn:adsk.eagle:library:342" deviceset="4R-N" device="0603-ARC" package3d_urn="urn:adsk.eagle:package:24926/1" value="10K"/>
 <part name="RN2" library="resistor-dil" library_urn="urn:adsk.eagle:library:342" deviceset="4R-N" device="0603-ARC" package3d_urn="urn:adsk.eagle:package:24926/1" value="1K"/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
-<part name="P+7" library="supply1" deviceset="+5V" device=""/>
+<part name="GND4" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14108,30 +14108,29 @@ Source: RS Component / Phycomp</description>
 <instance part="GND10" gate="1" x="48.26" y="-33.02"/>
 <instance part="GND11" gate="1" x="58.42" y="-33.02"/>
 <instance part="GND12" gate="1" x="68.58" y="-33.02"/>
-<instance part="P+5" gate="1" x="-12.7" y="12.7"/>
-<instance part="P+6" gate="1" x="-33.02" y="12.7"/>
-<instance part="GND14" gate="1" x="-10.16" y="-35.56"/>
-<instance part="R2" gate="G$1" x="-12.7" y="-22.86" rot="R90"/>
-<instance part="R3" gate="G$1" x="-5.08" y="-22.86" rot="R90"/>
+<instance part="P+5" gate="1" x="-15.24" y="12.7"/>
+<instance part="P+6" gate="1" x="-22.86" y="12.7"/>
+<instance part="GND14" gate="1" x="-30.48" y="-33.02"/>
+<instance part="R2" gate="G$1" x="-30.48" y="-22.86" rot="R90"/>
+<instance part="R3" gate="G$1" x="-22.86" y="-22.86" rot="R90"/>
 <instance part="C1" gate="G$1" x="48.26" y="-20.32"/>
 <instance part="C2" gate="G$1" x="58.42" y="-20.32"/>
 <instance part="C3" gate="G$1" x="25.4" y="-35.56" rot="R90"/>
-<instance part="R1" gate="G$1" x="-12.7" y="-5.08" rot="R90"/>
+<instance part="R1" gate="G$1" x="-15.24" y="-5.08" rot="R90"/>
 <instance part="C4" gate="G$1" x="48.26" y="17.78"/>
 <instance part="GND1" gate="1" x="48.26" y="7.62"/>
 <instance part="LED2" gate="G$1" x="-139.7" y="40.64" rot="R90"/>
 <instance part="LED1" gate="G$1" x="-147.32" y="35.56" rot="R90"/>
 <instance part="GND2" gate="1" x="-165.1" y="30.48"/>
-<instance part="RN1" gate="A" x="-40.64" y="-2.54" rot="R90"/>
-<instance part="RN1" gate="B" x="-33.02" y="-2.54" rot="R90"/>
+<instance part="RN1" gate="A" x="-30.48" y="-5.08" rot="R90"/>
+<instance part="RN1" gate="B" x="-22.86" y="-5.08" rot="R90"/>
 <instance part="RN1" gate="C" x="-142.24" y="-17.78" rot="R90"/>
-<instance part="RN1" gate="D" x="-165.1" y="7.62"/>
 <instance part="RN2" gate="A" x="-157.48" y="40.64"/>
 <instance part="RN2" gate="B" x="-157.48" y="35.56"/>
 <instance part="RN2" gate="C" x="-157.48" y="58.42"/>
 <instance part="RN2" gate="D" x="-157.48" y="53.34"/>
-<instance part="P+2" gate="1" x="-40.64" y="12.7"/>
-<instance part="P+7" gate="1" x="-154.94" y="7.62" rot="R270"/>
+<instance part="P+2" gate="1" x="-30.48" y="12.7"/>
+<instance part="GND4" gate="1" x="-22.86" y="-33.02"/>
 </instances>
 <busses>
 </busses>
@@ -14250,14 +14249,8 @@ Source: RS Component / Phycomp</description>
 </segment>
 <segment>
 <pinref part="GND14" gate="1" pin="GND"/>
-<pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="-10.16" y1="-30.48" x2="-10.16" y2="-33.02" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="-12.7" y1="-27.94" x2="-12.7" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="-10.16" y1="-30.48" x2="-12.7" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="-10.16" y="-30.48"/>
-<wire x1="-10.16" y1="-30.48" x2="-5.08" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="-5.08" y1="-30.48" x2="-5.08" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="-27.94" x2="-30.48" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C4" gate="G$1" pin="2"/>
@@ -14282,6 +14275,11 @@ Source: RS Component / Phycomp</description>
 <wire x1="-165.1" y1="58.42" x2="-165.1" y2="53.34" width="0.1524" layer="91"/>
 <junction x="-165.1" y="53.34"/>
 </segment>
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="-22.86" y1="-30.48" x2="-22.86" y2="-27.94" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="+5V" class="1">
 <segment>
@@ -14297,7 +14295,7 @@ Source: RS Component / Phycomp</description>
 </segment>
 <segment>
 <pinref part="P+5" gate="1" pin="+5V"/>
-<wire x1="-12.7" y1="10.16" x2="-12.7" y2="0" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="10.16" x2="-15.24" y2="0" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 </segment>
 <segment>
@@ -14313,27 +14311,27 @@ Source: RS Component / Phycomp</description>
 <pinref part="U$1" gate="G$1" pin="VBUS"/>
 <wire x1="-132.08" y1="-10.16" x2="-142.24" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="-142.24" y1="-10.16" x2="-152.4" y2="-10.16" width="0.1524" layer="91"/>
-<wire x1="-190.5" y1="-10.16" x2="-152.4" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-190.5" y1="-10.16" x2="-170.18" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="-152.4" y="-10.16"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
+<wire x1="-170.18" y1="-10.16" x2="-152.4" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="-152.4" y1="-10.16" x2="-152.4" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-142.24" y1="-12.7" x2="-142.24" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="-142.24" y="-10.16"/>
+<pinref part="JP10" gate="A" pin="1"/>
+<wire x1="-177.8" y1="7.62" x2="-170.18" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-170.18" y1="7.62" x2="-170.18" y2="-10.16" width="0.1524" layer="91"/>
+<junction x="-170.18" y="-10.16"/>
 </segment>
 <segment>
 <pinref part="RN1" gate="A" pin="2"/>
-<wire x1="-40.64" y1="10.16" x2="-40.64" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="10.16" x2="-30.48" y2="0" width="0.1524" layer="91"/>
 <pinref part="P+2" gate="1" pin="+5V"/>
-</segment>
-<segment>
-<pinref part="RN1" gate="D" pin="2"/>
-<pinref part="P+7" gate="1" pin="+5V"/>
-<wire x1="-157.48" y1="7.62" x2="-160.02" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+6" gate="1" pin="+5V"/>
 <pinref part="RN1" gate="B" pin="2"/>
-<wire x1="-33.02" y1="2.54" x2="-33.02" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="0" x2="-22.86" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -14394,13 +14392,6 @@ Source: RS Component / Phycomp</description>
 <wire x1="-132.08" y1="-25.4" x2="-142.24" y2="-25.4" width="0.1524" layer="91"/>
 <wire x1="-142.24" y1="-25.4" x2="-142.24" y2="-22.86" width="0.1524" layer="91"/>
 <pinref part="RN1" gate="C" pin="1"/>
-</segment>
-</net>
-<net name="COM" class="0">
-<segment>
-<pinref part="JP10" gate="A" pin="1"/>
-<wire x1="-177.8" y1="7.62" x2="-170.18" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="RN1" gate="D" pin="1"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -14476,7 +14467,7 @@ Source: RS Component / Phycomp</description>
 <net name="N$30" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="EN"/>
-<wire x1="-12.7" y1="-10.16" x2="15.24" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="-10.16" x2="15.24" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -14484,24 +14475,22 @@ Source: RS Component / Phycomp</description>
 <segment>
 <pinref part="IC2" gate="G$1" pin="GO"/>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="-5.08" y1="-12.7" x2="15.24" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="-5.08" y1="-17.78" x2="-5.08" y2="-12.7" width="0.1524" layer="91"/>
-<junction x="-5.08" y="-12.7"/>
-<wire x1="-5.08" y1="-12.7" x2="-33.02" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="-12.7" x2="15.24" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="-17.78" x2="-22.86" y2="-12.7" width="0.1524" layer="91"/>
+<junction x="-22.86" y="-12.7"/>
 <pinref part="RN1" gate="B" pin="1"/>
-<wire x1="-33.02" y1="-12.7" x2="-33.02" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="-12.7" x2="-22.86" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$32" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="G1"/>
-<wire x1="-12.7" y1="-15.24" x2="-12.7" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="-15.24" x2="15.24" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="-15.24" x2="-30.48" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="-15.24" x2="15.24" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="-12.7" y1="-15.24" x2="-40.64" y2="-15.24" width="0.1524" layer="91"/>
-<junction x="-12.7" y="-15.24"/>
+<junction x="-30.48" y="-15.24"/>
 <pinref part="RN1" gate="A" pin="1"/>
-<wire x1="-40.64" y1="-15.24" x2="-40.64" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="-15.24" x2="-30.48" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SGND" class="1">
