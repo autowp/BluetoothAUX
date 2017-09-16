@@ -1,8 +1,8 @@
 # BluetoothAUX
 
-Tiny Bluetooth to AUX converter on CSR8645
+Tiny Bluetooth to AUX converter on CSR8645 and TPA6132A2
 
 Features:
-- Size: 40mm x 40mm
+- Size: 20mm x 28mm
 - 3.5mm jack output
-- Power via mini-USB 
+- Power via micro-USB 
