@@ -12966,7 +12966,7 @@ Manufacturer: Hirose&lt;br&gt;
 <wire x1="-137.16" y1="45.72" x2="-132.08" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="VBAT_SENSE" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="BAT_SENSE"/>
 <wire x1="-111.76" y1="-45.72" x2="-111.76" y2="-48.26" width="0.1524" layer="91"/>
