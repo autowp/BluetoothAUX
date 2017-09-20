@@ -12619,6 +12619,8 @@ Rds(on) &amp;lt; 5R @ Vgs 2.7 V.
 <part name="RN3" library="resistor-dil" library_urn="urn:adsk.eagle:library:342" deviceset="4R-N" device="0603-ARC" package3d_urn="urn:adsk.eagle:package:24926/1" value="100K"/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" deviceset="+5V" device=""/>
+<part name="P+9" library="supply1" deviceset="+5V" device=""/>
+<part name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="0"/>
 </parts>
 <sheets>
 <sheet>
@@ -12644,7 +12646,7 @@ Rds(on) &amp;lt; 5R @ Vgs 2.7 V.
 <instance part="U$1" gate="G$1" x="-96.52" y="5.08"/>
 <instance part="GND5" gate="1" x="-38.1" y="40.64"/>
 <instance part="GND6" gate="1" x="-144.78" y="78.74"/>
-<instance part="GND7" gate="1" x="-149.86" y="-2.54"/>
+<instance part="GND7" gate="1" x="-160.02" y="-2.54"/>
 <instance part="GND3" gate="1" x="-134.62" y="-40.64"/>
 <instance part="P+3" gate="1" x="-147.32" y="-10.16" rot="R90"/>
 <instance part="IC2" gate="G$1" x="-104.14" y="-104.14"/>
@@ -12676,7 +12678,7 @@ Rds(on) &amp;lt; 5R @ Vgs 2.7 V.
 <instance part="LED1" gate="G$1" x="-142.24" y="40.64"/>
 <instance part="GND9" gate="1" x="-83.82" y="-132.08"/>
 <instance part="P+1" gate="1" x="-162.56" y="53.34"/>
-<instance part="JP2" gate="A" x="-160.02" y="17.78" rot="R180"/>
+<instance part="JP2" gate="A" x="-170.18" y="17.78" rot="R180"/>
 <instance part="C6" gate="G$1" x="-91.44" y="99.06"/>
 <instance part="GND2" gate="1" x="-91.44" y="68.58"/>
 <instance part="GND13" gate="1" x="-73.66" y="68.58"/>
@@ -12686,6 +12688,10 @@ Rds(on) &amp;lt; 5R @ Vgs 2.7 V.
 <instance part="RN3" gate="B" x="-73.66" y="104.14" rot="R90"/>
 <instance part="GND15" gate="1" x="-137.16" y="78.74"/>
 <instance part="P+8" gate="1" x="-137.16" y="109.22"/>
+<instance part="RN1" gate="D" x="-30.48" y="-22.86"/>
+<instance part="RN2" gate="C" x="-30.48" y="-12.7"/>
+<instance part="P+9" gate="1" x="-45.72" y="-12.7" rot="R90"/>
+<instance part="R1" gate="G$1" x="-144.78" y="10.16" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -12768,9 +12774,9 @@ Rds(on) &amp;lt; 5R @ Vgs 2.7 V.
 </segment>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="-149.86" y1="7.62" x2="-149.86" y2="0" width="0.1524" layer="91"/>
+<wire x1="-160.02" y1="7.62" x2="-160.02" y2="0" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="A" pin="1"/>
-<wire x1="-157.48" y1="7.62" x2="-149.86" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-167.64" y1="7.62" x2="-160.02" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND10" gate="1" pin="GND"/>
@@ -12891,19 +12897,29 @@ Rds(on) &amp;lt; 5R @ Vgs 2.7 V.
 <wire x1="-137.16" y1="101.6" x2="-137.16" y2="106.68" width="0.1524" layer="91"/>
 <junction x="-137.16" y="101.6"/>
 </segment>
+<segment>
+<pinref part="P+9" gate="1" pin="+5V"/>
+<pinref part="RN2" gate="C" pin="1"/>
+<wire x1="-43.18" y1="-12.7" x2="-38.1" y2="-12.7" width="0.1524" layer="91"/>
+<pinref part="RN1" gate="D" pin="2"/>
+<wire x1="-38.1" y1="-12.7" x2="-35.56" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="-22.86" x2="-38.1" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="-22.86" x2="-38.1" y2="-12.7" width="0.1524" layer="91"/>
+<junction x="-38.1" y="-12.7"/>
+</segment>
 </net>
 <net name="MISO" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="SPI_MISO/PIO3"/>
 <pinref part="JP2" gate="A" pin="8"/>
-<wire x1="-157.48" y1="25.4" x2="-132.08" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-167.64" y1="25.4" x2="-132.08" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CS" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="SPI_CSB/PIO4"/>
 <wire x1="-132.08" y1="20.32" x2="-134.62" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="-157.48" y1="22.86" x2="-134.62" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-167.64" y1="22.86" x2="-134.62" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-134.62" y1="22.86" x2="-134.62" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="A" pin="7"/>
 </segment>
@@ -12912,7 +12928,7 @@ Rds(on) &amp;lt; 5R @ Vgs 2.7 V.
 <segment>
 <pinref part="U$1" gate="G$1" pin="SPI_CLK/PIO5"/>
 <wire x1="-137.16" y1="15.24" x2="-132.08" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="-157.48" y1="20.32" x2="-137.16" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-167.64" y1="20.32" x2="-137.16" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="-137.16" y1="20.32" x2="-137.16" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="A" pin="6"/>
 </segment>
@@ -12921,7 +12937,7 @@ Rds(on) &amp;lt; 5R @ Vgs 2.7 V.
 <segment>
 <pinref part="U$1" gate="G$1" pin="SPI_MOSI/PIO2"/>
 <wire x1="-139.7" y1="10.16" x2="-132.08" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="-157.48" y1="17.78" x2="-139.7" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="-167.64" y1="17.78" x2="-139.7" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="-139.7" y1="17.78" x2="-139.7" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="A" pin="5"/>
 </segment>
@@ -12929,19 +12945,19 @@ Rds(on) &amp;lt; 5R @ Vgs 2.7 V.
 <net name="TX" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="UART_TX/PIO1"/>
-<wire x1="-132.08" y1="0" x2="-144.78" y2="0" width="0.1524" layer="91"/>
-<wire x1="-144.78" y1="12.7" x2="-144.78" y2="0" width="0.1524" layer="91"/>
+<wire x1="-132.08" y1="0" x2="-152.4" y2="0" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="12.7" x2="-152.4" y2="0" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="A" pin="3"/>
-<wire x1="-157.48" y1="12.7" x2="-144.78" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="-167.64" y1="12.7" x2="-152.4" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RX" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="UART_RX/PIO0"/>
-<wire x1="-132.08" y1="-5.08" x2="-147.32" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="-147.32" y1="10.16" x2="-147.32" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="-132.08" y1="-5.08" x2="-154.94" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="-154.94" y1="10.16" x2="-154.94" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="A" pin="2"/>
-<wire x1="-157.48" y1="10.16" x2="-147.32" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-167.64" y1="10.16" x2="-154.94" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="POWER_EN" class="0">
@@ -13094,13 +13110,11 @@ Rds(on) &amp;lt; 5R @ Vgs 2.7 V.
 <wire x1="-147.32" y1="45.72" x2="-149.86" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="SPI_PCM" class="0">
 <segment>
 <pinref part="JP2" gate="A" pin="4"/>
-<pinref part="U$1" gate="G$1" pin="SPI_PCM"/>
-<wire x1="-157.48" y1="15.24" x2="-142.24" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="-142.24" y1="15.24" x2="-142.24" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="-142.24" y1="5.08" x2="-132.08" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-167.64" y1="15.24" x2="-144.78" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -13143,6 +13157,13 @@ Rds(on) &amp;lt; 5R @ Vgs 2.7 V.
 <wire x1="-91.44" y1="86.36" x2="-91.44" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="G"/>
 <pinref part="RN3" gate="A" pin="1"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="SPI_PCM"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="-144.78" y1="5.08" x2="-132.08" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
