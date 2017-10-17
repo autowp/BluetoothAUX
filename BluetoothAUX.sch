@@ -13340,6 +13340,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <approved hash="104,1,-91.44,-88.9,IC2,VDD,+5V,,,"/>
 <approved hash="104,1,-91.44,-106.68,IC2,PGND,GND,,,"/>
 <approved hash="104,1,-147.32,101.6,J4,VBUS,+5V,,,"/>
+<approved hash="113,1,-165.337,16.2839,JP1,,,,,"/>
 </errors>
 </schematic>
 </drawing>
